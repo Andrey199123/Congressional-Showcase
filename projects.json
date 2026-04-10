@@ -433,5 +433,35 @@
   "district": "VA-11",
   "state": "VA",
   "tags": ["safety", "health", "privacy", "pwa"]
+},
+{
+  "slug": "MP-00",
+  "name": "ZongYao Huang, Fiona Zhu, Boying Lin, Brianna Paraiso",
+  "appName": "IslaGo",
+  "description": "A comprehensive mobile transit application for bus arrival estimation in the CNMI to improve island mobility in Saipan through real-time bus tracking, personalized ride assistance, and a curated guide to local attractions.",
+  "thumbnail": "sites/MP-00/thumbnail.png",
+  "location": {
+    "lat": 15.1869,
+    "lng": 145.7499,
+    "label": "Saipan, MP"
+  },
+  "district": "MP-00",
+  "state": "MP",
+  "tags": ["environment", "civic", "accessibility"]
+},
+{
+  "slug": "MI-09",
+  "name": "Shivansh Sahni and Shivika Sahni",
+  "appName": "Find My Trial",
+  "description": "A platform that helps patients identify clinical trials matching their conditions using NLP-powered medical chart analysis.",
+  "thumbnail": "sites/MI-09/thumbnail.png",
+  "location": {
+    "lat": 42.7355,
+    "lng": -83.4192,
+    "label": "Clarkston, MI"
+  },
+  "district": "MI-09",
+  "state": "MI",
+  "tags": ["health", "ai"]
 }
 ]
