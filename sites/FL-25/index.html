@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveSafe AI - FL-25 Congressional App Challenge</title>
+    <link rel="stylesheet" href="../../shared.css">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #3b82f6;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--bg-light);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin: 0 0 0.5rem 0;
+            font-weight: 700;
+        }
+
+        .header .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            margin: 0;
+        }
+
+        .header .district {
+            font-size: 1rem;
+            opacity: 0.85;
+            margin-top: 0.5rem;
+        }
+
+        .section {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            color: var(--primary-color);
+            font-size: 1.75rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .developers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .developer-card {
+            background: var(--bg-light);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            border: 2px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .developer-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+        }
+
+        .developer-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        .developer-card .school {
+            color: var(--text-light);
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .developer-card .bio {
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        .app-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.75rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .link-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .link-button:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .link-button.secondary {
+            background: var(--text-light);
+        }
+
+        .link-button.secondary:hover {
+            background: var(--text-dark);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .feature-card {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .feature-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            color: var(--text-dark);
+            margin: 0;
+        }
+
+        .award-banner {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: #78350f;
+            padding: 1rem 2rem;
+            border-radius: 0.75rem;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+
+            .developers {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚗 DriveSafe AI</h1>
+            <p class="subtitle">Hands-Free Driver Alert System Using AI Vision</p>
+            <p class="district">Florida's 25th Congressional District</p>
+        </div>
+
+        <div class="award-banner">
+            🏆 Winner of Rep. Debbie Wasserman Schultz's 2025 Congressional App Challenge
+        </div>
+
+        <div class="section">
+            <h2>About the Developers</h2>
+            <div class="developers">
+                <div class="developer-card">
+                    <h3>Andrey Vasilyev</h3>
+                    <p class="school">American Heritage School</p>
+                    <p class="bio">I'm a junior at American Heritage who likes debate and working out, and the inspiration for this project was to keep people safe on the road from reckless drivers, especially with how driving can be in Florida.</p>
+                </div>
+                <div class="developer-card">
+                    <h3>Ishaan Garg</h3>
+                    <p class="school">Cypress Bay High School</p>
+                    <p class="bio">I'm a junior at Cypress Bay High School that competes in DECA, math comp, and loves CS</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>About DriveSafe AI</h2>
+            <p class="app-description">
+                DriveSafe AI is a hands-free driver alert system that uses advanced AI vision technology to detect drowsiness, distraction, and impairment in real-time. The app continuously monitors the driver through their device's camera and provides immediate visual and audio alerts when signs of unsafe driving are detected.
+            </p>
+            <p class="app-description">
+                Built with a focus on road safety, DriveSafe AI aims to reduce accidents caused by driver fatigue, distraction, and impairment. The system uses OpenAI's GPT-4 Vision API to analyze facial expressions, eye movements, and body language to determine the driver's state and alert them before dangerous situations occur.
+            </p>
+
+            <div class="features">
+                <div class="feature-card">
+                    <h3>🔴 Impairment Detection</h3>
+                    <p>Detects signs of alcohol or substance impairment with red visual alerts</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🟠 Drowsiness Monitoring</h3>
+                    <p>Identifies fatigue and sleepiness with orange overlay warnings</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🟡 Distraction Alerts</h3>
+                    <p>Monitors attention and focus with yellow alerts for distracted driving</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📱 Real-Time Analysis</h3>
+                    <p>Continuous monitoring with analysis every 3 seconds for immediate feedback</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔔 Multi-Modal Alerts</h3>
+                    <p>Visual overlays, browser notifications, and audio alerts for maximum awareness</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📲 PWA Support</h3>
+                    <p>Installable as a Progressive Web App for easy access on any device</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Demo Video</h2>
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/EH8bW3gCK5o" 
+                    title="DriveSafe AI Demo"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Try It Out</h2>
+            <div class="links">
+                <a href="https://drunk-detector.vercel.app/monitor" class="link-button" target="_blank" rel="noopener noreferrer">
+                    🚀 Launch Live App
+                </a>
+                <a href="https://github.com/Andrey199123/DriveSafe-AI" class="link-button secondary" target="_blank" rel="noopener noreferrer">
+                    💻 View on GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../nav.js"></script>
+</body>
+</html>
