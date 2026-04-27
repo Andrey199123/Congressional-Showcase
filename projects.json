@@ -1384,5 +1384,68 @@
   "district": "FL-25",
   "state": "FL",
   "tags": ["safety", "AI", "computer-vision", "transportation", "health"]
+},
+{
+  "slug": "CA-28",
+  "name": "Anika Jha",
+  "appName": "Fire Up",
+  "description": "A web app bringing together wildfire prediction, live detection, guidance, and evacuation planning in one experience.",
+  "thumbnail": "sites/CA-28/thumbnail.png",
+  "location": { "lat": 34.1274, "lng": -118.0459, "label": "Arcadia, CA" },
+  "district": "CA-28", "state": "CA", "tags": ["environment", "ai", "safety"]
+},
+{
+  "slug": "NY-07",
+  "name": "Eduardo Almeyda",
+  "appName": "LearnIT",
+  "description": "An app to help students learn topics better, keep progress, and answer questions with the use of AI.",
+  "thumbnail": "sites/NY-07/logo.png",
+  "location": { "lat": 40.7455, "lng": -73.906, "label": "New York, NY" },
+  "district": "NY-07", "state": "NY", "tags": ["education", "ai"]
+},
+{
+  "slug": "GA-06",
+  "name": "Utshaho Bandyopadhyay Gupta",
+  "appName": "Affordable Smart Glasses",
+  "description": "3D-printed smart glasses helping blind and visually impaired people with day-to-day tasks using on-device AI.",
+  "thumbnail": "sites/GA-06/thumbnail.png",
+  "location": { "lat": 33.749, "lng": -84.388, "label": "Atlanta, GA" },
+  "district": "GA-06", "state": "GA", "tags": ["education", "ai", "accessibility"]
+},
+{
+  "slug": "FL-22",
+  "name": "Yuting Ding",
+  "appName": "BinGo!",
+  "description": "An interactive app helping students learn how to sort garbage correctly through search, quizzes, and timed games.",
+  "thumbnail": "sites/FL-22/thumbnail.png",
+  "location": { "lat": 26.4615, "lng": -80.0728, "label": "Delray Beach, FL" },
+  "district": "FL-22", "state": "FL", "tags": ["education", "environment"]
+},
+{
+  "slug": "TX-23",
+  "name": "Mridul Gautham",
+  "appName": "SafeZone",
+  "description": "A PWA providing tools to survive disasters with real-time alerts, safe spot locating, and emergency communications.",
+  "thumbnail": "sites/TX-23/thumbnail.png",
+  "location": { "lat": 29.4241, "lng": -98.4936, "label": "San Antonio, TX" },
+  "district": "TX-23", "state": "TX", "tags": ["environment", "social", "accessibility"]
+},
+{
+  "slug": "IL-01",
+  "name": "Saanika Dutta",
+  "appName": "Bias Lite",
+  "description": "An AI-powered tool that detects biased language in text and suggests more fair and inclusive alternatives.",
+  "thumbnail": "sites/IL-01/thumbnail.png",
+  "location": { "lat": 41.8781, "lng": -87.6298, "label": "Chicago, IL" },
+  "district": "IL-01", "state": "IL", "tags": ["civic", "social", "ai", "accessibility"]
+},
+{
+  "slug": "TX-03",
+  "name": "Ron Minin, Abyudh Mukkavilli, Bosco Qiu",
+  "appName": "Verdis",
+  "description": "A drone-based crop health monitoring system using ML, computer vision, and NLP to detect disease and advise farmers.",
+  "thumbnail": "sites/TX-03/thumbnail.png",
+  "location": { "lat": 33.2362, "lng": -96.8011, "label": "Prosper, TX" },
+  "district": "TX-03", "state": "TX", "tags": ["environment", "ai"]
 }
 ]
