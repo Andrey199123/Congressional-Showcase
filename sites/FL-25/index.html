@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DriveSafe AI | Andrey Vasilyev & Ishaan Garg</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta name="description" content="DriveSafe AI, a camera-monitoring prototype by Andrey Vasilyev and Ishaan Garg and a Congressional App Challenge district winner.">
+  <link rel="icon" type="image/png" href="favicon.png">
 
   <!-- DO NOT REMOVE -->
   <link rel="stylesheet" href="../../assets/css/shared.css">
@@ -238,7 +239,7 @@
 
     .dev-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
       gap: 2rem;
     }
 
@@ -303,7 +304,7 @@
     /* ── FEATURES ── */
     .features-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
       gap: 1.5rem;
     }
 
@@ -471,6 +472,17 @@
     .hero-desc { animation-delay: 0.2s; }
     .hero-badge { animation-delay: 0.3s; }
     .hero-visual { animation-delay: 0.15s; }
+    a:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+    @media (max-width: 768px) {
+      .hero-content { border-right: 0; padding-top: 6rem; }
+      .hero-visual img { display: block; height: 300px; padding: 2rem; }
+      .back-link { top: 1rem; left: 1rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .anim-slide-up, .anim-fade { animation: none; opacity: 1; transform: none; }
+      *, *::before, *::after { transition: none !important; }
+    }
   </style>
 </head>
 <body>
@@ -488,7 +500,7 @@
       DRIVE<span class="accent">SAFE</span> AI
     </h1>
     <p class="hero-desc anim-slide-up">
-      A hands-free driver alert system using AI vision to detect drowsiness, distraction, and impairment in real-time.
+      A camera-monitoring prototype that explores visual signs of drowsiness and distraction through AI vision analysis and on-screen alerts.
     </p>
     <span class="hero-badge anim-slide-up">
       Winner — Rep. Debbie Wasserman Schultz's 2025 Congressional App Challenge
@@ -549,7 +561,7 @@
       <div class="feature">
         <span class="feature-label">Impairment</span>
         <h3>Detection</h3>
-        <p>Detects signs of alcohol or substance impairment with red visual alerts</p>
+        <p>Experimental visual-warning mode; camera observations cannot establish alcohol or substance impairment</p>
       </div>
       <div class="feature">
         <span class="feature-label">Drowsiness</span>
@@ -588,13 +600,14 @@
   <div class="video-wrapper">
     <iframe
       src="https://www.youtube.com/embed/EH8bW3gCK5o"
+      loading="lazy"
       title="DriveSafe AI Demo"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen>
     </iframe>
   </div>
   <div class="demo-links">
-    <a href="https://drunk-detector.vercel.app/monitor" target="_blank" rel="noopener" class="demo-link">
+    <a href="https://drivesafe-ai.vercel.app/" target="_blank" rel="noopener" class="demo-link">
       Launch App
     </a>
     <a href="https://github.com/Andrey199123/DriveSafe-AI" target="_blank" rel="noopener" class="demo-link secondary">
